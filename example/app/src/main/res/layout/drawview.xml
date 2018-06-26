@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF7f7f7f">
+
+        <ImageView
+            android:id="@+id/drawViewBGImgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF7f7f7f" />
+
+        <FrameLayout
+            android:id="@+id/drawNoteLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFffffff" >
+
+            <com.pnf.pen.drawingview.DrawView
+                android:id="@+id/drawView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:onClick="ClearAllBtnClicked"
+            android:text="ClearAll"
+            android:textColor="#FF000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:orientation="horizontal">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:onClick="penModeBtnClicked"
+                android:text="Pen"
+                android:textColor="#FF000000" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:onClick="eraserModeBtnClicked"
+                android:text="Eraser"
+                android:textColor="#FF000000" />
+        </LinearLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:onClick="CloseBtnClicked"
+            android:text="Close"
+            android:textColor="#FF000000" />
+    </FrameLayout>
+</FrameLayout>
